@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block 'contant' %}
+
+<div class="container mt-5">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-3 mb-4">
+            <div class="card" title="{{product.name}}">
+                <img src={{product.image.url}} alt="" style="height:200px;object-fit:cover" srcset="">
+                <div class="card-body">
+                    <h2 class="h6 text-truncate">{{product.name}}</h2>
+                    {% if product.discount_price %}
+                    <h5 class="h6">Rs. {{product.discount_price}} 
+                        <del>{{product.price}}</del>
+                    </h5>
+                    
+                    {% else %}
+                    <h5 class="h6">Rs. {{product.price}}</h5>
+                    {% endif %}
+                    
+                    <a href="" class="btn btn-success">Buy</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+       
+    </div>
+</div>
+
+{% endblock  %}

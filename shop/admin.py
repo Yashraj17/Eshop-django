@@ -28,3 +28,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Product,ProductAdmin)
+admin.site.register(OrderItem)
+admin.site.register(Order)
+admin.site.register(Coupon)
+admin.site.register(Address)
